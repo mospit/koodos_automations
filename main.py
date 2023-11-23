@@ -6,7 +6,7 @@ from helper import Helper
 
 async def main():
     try:
-        Helper.save_data()
+        # Helper.save_data()
         data = Helper.get_data()
         n_failed = 0
         n_passed = 0
@@ -14,8 +14,8 @@ async def main():
         n_websites = len(data)
         bots = []
     
-        user_data = {"firstName": "Sarah", "lastName": "Smith", "fullName": "Sarah Smith", "email": "w8lqbh6q2v@rentforsale7.com",
-                     "phone": "5803105983", "password": "KawakiChapter@24", "zipcode": "78612"}
+        user_data = {"firstName": "Sarah", "lastName": "Smith", "fullName": "Sarah Smith", "email": "9dbtyfhi7w@pirolsnet.com",
+                     "phone": "5803114985", "password": "KawakiChapter@24", "zipcode": "78612"}
 
         for i in range(n_websites):
             bot = Bot(data[i]['sequence']['url'], data[i]['sequence']['sequence'], user_data)

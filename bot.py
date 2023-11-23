@@ -65,7 +65,7 @@ class Bot:
 
                 # Create page
                 page = await context.new_page()
-                await page.goto(self.get_url(), wait_until="domcontentloaded", timeout=0)
+                await page.goto(self.get_url(), wait_until="domcontentloaded")
                 
                 # Run sequence
                 for s in self.sequence:
