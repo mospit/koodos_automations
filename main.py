@@ -1,3 +1,4 @@
+import asyncio
 from window import Window
 
 if __name__ == "__main__":

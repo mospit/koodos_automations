@@ -39,11 +39,14 @@ class Helper:
         else:
             print("No file selected.")
     @staticmethod
-    def load_user_data(option=0):
-        people = pd.read_csv("user_data.csv")
+    def load_user_data(option=0, person=""):
+        print(f"load user data: {person}")
+        df = pd.read_csv("user_data.csv")
         if option == 0:
-            people = people
+            p = df
         elif option == 1:
-            people = people["first_name"].tolist()
-        return people
+            p = df["first_name"].tolist()
+        elif option == 2:
+            p =  df[df["first_name"] == person].values.tolist()
+        return list(p)
     

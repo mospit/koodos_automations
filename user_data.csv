@@ -1,4 +1,4 @@
-first_name,last_name,email,phone,stret1,stret2,city,state,zip
+first_name,last_name,email,phone,street1,street2,city,state,zip
 Paola,Croce,pcroce0@usda.gov,5593596713,3 Eastwood Place,13th Floor,Fresno,California,93762
 Mimi,Walsh,mwalsh1@meetup.com,7041890007,2748 Warrior Junction,PO Box 46555,Gastonia,North Carolina,28055
 Gloriana,Bogie,gbogie2@seattletimes.com,2057231647,5046 Arizona Court,Room 1639,Birmingham,Alabama,35254
@@ -15,21 +15,21 @@ Pernell,Rheubottom,prheubottomc@so-net.ne.jp,5852207068,20863 Dryden Lane,PO Box
 Camella,Disman,cdismand@wordpress.com,8501291266,025 Briar Crest Crossing,PO Box 73849,Pensacola,Florida,32575
 Ashleigh,Moors,amoorse@ow.ly,4173922642,0 Ilene Point,Apt 1125,Springfield,Missouri,65898
 Kim,Besson,kbessonf@storify.com,2107563504,66175 Petterle Road,PO Box 18443,San Antonio,Texas,78240
-Gonzalo,McCraw,gmccrawg@goodreads.com,5085501095,21741 Swallow Parkway,Apt 1564,Worcester,Massachusetts,01654
+Gonzalo,McCraw,gmccrawg@goodreads.com,5085501095,21741 Swallow Parkway,Apt 1564,Worcester,Massachusetts,1654
 Keen,Fanshaw,kfanshawh@apple.com,6614553432,03394 Ohio Street,Room 600,Bakersfield,California,93305
 Catie,Moultrie,cmoultriei@wisc.edu,9155604853,3599 Duke Crossing,20th Floor,El Paso,Texas,79905
 Joey,Goodee,jgoodeej@woothemes.com,5857062290,95 Riverside Park,Suite 73,Rochester,New York,14609
 Arie,Rutter,arutterk@omniture.com,8167802648,35 Becker Parkway,PO Box 83324,Kansas City,Missouri,64125
 Colette,Cadigan,ccadiganl@hostgator.com,9184654031,4884 Sunbrook Pass,Apt 567,Tulsa,Oklahoma,74133
 Melinda,Gresswell,mgresswellm@ucla.edu,7176358206,6 Katie Pass,PO Box 42664,York,Pennsylvania,17405
-Mariele,Lisciardelli,mlisciardellin@boston.com,2039742413,63934 Darwin Pass,PO Box 47847,Waterbury,Connecticut,06726
-Viv,Adrienne,vadrienneo@time.com,2038507041,0084 Canary Terrace,Suite 78,Norwalk,Connecticut,06854
+Mariele,Lisciardelli,mlisciardellin@boston.com,2039742413,63934 Darwin Pass,PO Box 47847,Waterbury,Connecticut,6726
+Viv,Adrienne,vadrienneo@time.com,2038507041,0084 Canary Terrace,Suite 78,Norwalk,Connecticut,6854
 Jeremiah,Pittham,jpitthamp@paginegialle.it,4104354318,05906 Magdeline Street,Suite 88,Baltimore,Maryland,21216
 Humberto,Risby,hrisbyq@sakura.ne.jp,4044812419,648 Forest Trail,Apt 272,Atlanta,Georgia,30358
-Drucy,Iacomelli,diacomellir@examiner.com,6179342715,19843 Canary Avenue,Apt 1458,Lynn,Massachusetts,01905
+Drucy,Iacomelli,diacomellir@examiner.com,6179342715,19843 Canary Avenue,Apt 1458,Lynn,Massachusetts,1905
 Rora,Hallward,rhallwards@zdnet.com,2142669114,9 Hoffman Parkway,Room 376,Dallas,Texas,75397
 Ellis,Cuttell,ecuttellt@disqus.com,5701262068,0 Village Green Point,Apt 1584,Wilkes Barre,Pennsylvania,18763
-Zeke,Bryde,zbrydeu@comsenz.com,2039199604,3 Talisman Way,PO Box 10125,New Haven,Connecticut,06520
+Zeke,Bryde,zbrydeu@comsenz.com,2039199604,3 Talisman Way,PO Box 10125,New Haven,Connecticut,6520
 Lurleen,Crus,lcrusv@edublogs.org,7705627715,7 Columbus Way,Room 1864,Decatur,Georgia,30089
 Cosetta,Djordjevic,cdjordjevicw@vk.com,2602669706,1079 Sunfield Way,Room 1496,Fort Wayne,Indiana,46825
 Aubrey,Leipold,aleipoldx@facebook.com,7024244799,655 Manitowish Parkway,PO Box 2977,Las Vegas,Nevada,89193
@@ -66,7 +66,7 @@ Sal,Breffitt,sbreffitt1r@devhub.com,9031281337,7919 Bellgrove Point,Room 1796,Te
 Ofelia,Pugh,opugh1s@tuttocitta.it,5615733918,02 Summerview Lane,Room 1983,Boynton Beach,Florida,33436
 Kore,Curd,kcurd1t@bizjournals.com,5616740837,2 Summer Ridge Place,Room 792,West Palm Beach,Florida,33416
 Winni,Bache,wbache1u@icq.com,5097485261,34542 Farwell Place,Apt 1082,Spokane,Washington,99205
-Isa,Rumbelow,irumbelow1v@google.nl,6094367622,6393 Sugar Street,Apt 1696,Trenton,New Jersey,08608
+Isa,Rumbelow,irumbelow1v@google.nl,6094367622,6393 Sugar Street,Apt 1696,Trenton,New Jersey,8608
 Cletus,Clayhill,cclayhill1w@zimbio.com,5123729051,817 Sommers Point,PO Box 48377,Austin,Texas,78710
 Judi,Dodell,jdodell1x@twitpic.com,9133490403,79329 Cody Place,Room 278,Shawnee Mission,Kansas,66210
 Jeremy,Batchelour,jbatchelour1y@theatlantic.com,6821152141,866 Mockingbird Circle,PO Box 91621,Fort Worth,Texas,76115

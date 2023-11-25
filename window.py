@@ -6,13 +6,13 @@ from helper import Helper
 import pandas as pd
 import string
 import random
+import asyncio
 
 class Window:
     def __init__(self):
         self.window = tk.Tk()
         self.window.title("Koodos Automations")
         self.window.geometry("600x400")
-
         # Title
         self.title_label = ttk.Label(master=self.window, text="PR BOT", font="Calibri 24 bold")
         self.title_label.pack()
@@ -25,10 +25,13 @@ class Window:
         self.residental_frame = ttk.Frame(master=self.form_frame)
         self.footer_frame = ttk.Frame(master=self.form_frame)
 
-        options = Helper.load_user_data(1)  # Example list of options
+        self.options = Helper.load_user_data(1)  # Example list of options
 
         self.variable = tk.StringVar(self.window)
-        self.variable.set(options[0])  # Set default option
+        self.variable.set(self.options[0])  # Set default option
+        asyncio.run(self.create_elements())
+
+    async def create_elements(self):
         # Contact entries
         self.first_name_label = ttk.Label(master=self.contact_frame, text="First Name")
         self.first_name_entry = ttk.Entry(master=self.contact_frame)
@@ -58,9 +61,11 @@ class Window:
         self.zip_label = ttk.Label(master=self.residental_frame, text="Zip")
         self.zip_entry = ttk.Entry(master=self.residental_frame)
 
+        self.website_cont_label = ttk.Label(master=self.footer_frame, text="# websites")
+        self.website_cont_entry = ttk.Entry(master=self.footer_frame)
         self.run_button = ttk.Button(master=self.footer_frame, text="RUN", command=self._run)
         self.upload_button = ttk.Button(master=self.footer_frame, text="Upload User Data", command=Helper.upload_csv)
-        self.option_menu = tk.OptionMenu(self.footer_frame, self.variable, *options, command=self.on_option_select)
+        self.option_menu = tk.OptionMenu(self.footer_frame, self.variable, *self.options, command=self.on_option_select)
 
     def _create_grid(self):
         self.first_name_label.grid(column=0, row=0)
@@ -90,15 +95,19 @@ class Window:
         self.contact_frame.grid(column=0, row=0)  # Place contact frame in the grid
         self.residental_frame.grid(column=0, row=1)  # Place residential frame in the grid
 
-        self.run_button.grid(column=0, row=2)
-        self.upload_button.grid(column=1, row=2)
-        self.option_menu.grid(column=2, row=2)
+        self.website_cont_label = ttk.Label(master=self.footer_frame, text="# websites")
+        self.website_cont_label.grid(column=0, row=2)
+        self.website_cont_entry.grid(column=1, row=2)
+        self.run_button.grid(column=2, row=2)
+        self.upload_button.grid(column=3, row=2)
+        self.option_menu.grid(column=4, row=2)
         self.footer_frame.grid(column=0, row=2)
         self.form_frame.pack()
 
     def _get_input_feilds(self):
         first_name = self.first_name_entry.get()
         last_name = self.last_name_entry.get()
+        full_name = first_name + " " + last_name
         phone = self.phone_entry.get()
         email = self.email_entry.get()
         street1 = self.street1_entry.get()
@@ -106,8 +115,8 @@ class Window:
         city = self.city_entry.get()
         state = self.state_entry.get()
         zip_code = self.zip_entry.get()
-        print(f"first name: {first_name}, last name:{last_name}, phone: {phone}, email: {self.email}, street1: {self.street1}, street2: {self.street2}, city: {self.city}, state: {self.state}, zip code: {self.zip_code}")
-        return {"firstName": first_name, "lastName": last_name, "fullName": "Sarah Smith", "email": "jw8ia6dqsx@sfolkar.com",
+        print(f"first name: {first_name}, last name:{last_name}, phone: {phone}, email: {email}, street1: {street1}, street2: {street2}, city: {city}, state: {state}, zip code: {zip_code}")
+        return {"firstName": first_name, "lastName": last_name, "fullName": {full_name}, "email": "jw8ia6dqsx@sfolkar.com",
                 "phone": phone, "password": self._generate_password(), "zipcode": zip_code}
 
     def _generate_password(self, length=12, include_uppercase=True, include_lowercase=True, include_digits=True, include_special=True):
@@ -131,11 +140,42 @@ class Window:
     def _run(self):
         user_data = self._get_input_feilds()
         session = Session(user_data)
-        session.run()
+        asyncio.run(session.run())
 
     def on_option_select(self, event):
         selected_option = self.variable.get()
         print(f"Selected option: {selected_option}")
+        self._fill_fields(selected_option)
+
+    def _fill_fields(self, p):
+        person = Helper.load_user_data(option=2, person=p)
+        print(f"person: {person}")
+        self.first_name_entry.delete(0, tk.END)
+        self.first_name_entry.insert(0, person[0][0])
+
+        self.last_name_entry.delete(0, tk.END)
+        self.last_name_entry.insert(0, person[0][1])
+
+        self.email_entry.delete(0, tk.END)
+        self.email_entry.insert(0, person[0][2])
+
+        self.phone_entry.delete(0, tk.END)
+        self.phone_entry.insert(0, person[0][3])
+
+        self.street1_entry.delete(0, tk.END)
+        self.street1_entry.insert(0, person[0][4])
+
+        self.street2_entry.delete(0, tk.END)
+        self.street2_entry.insert(0, person[0][5])
+
+        self.city_entry.delete(0, tk.END)
+        self.city_entry.insert(0, person[0][6])
+
+        self.state_entry.delete(0, tk.END)
+        self.state_entry.insert(0, person[0][7])
+
+        self.zip_entry.delete(0, tk.END)
+        self.zip_entry.insert(0, person[0][8])
 
     def show(self):
         self._create_grid()

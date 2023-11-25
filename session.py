@@ -43,7 +43,8 @@ class Session:
                 for bot_result in results:
                     if bot_result is not None:
                         ran, bot_errors = bot_result  # Unpack bot's result
-                        n_passed += 1 if ran else 0  # Store the ran status
+                        if ran:
+                            n_passed += 1
                         errors.extend(bot_errors)  # Extend the errors list with bot-specific errors
                     else:
                         # Handle the case where bot_result is None
