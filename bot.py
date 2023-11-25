@@ -33,10 +33,11 @@ class BotCluster:
 
 class Bot:
     def __init__(self, url, sequence, user_data):
-        self.ran = True
+        self.ran = None
         self.url = url
         self.sequence = sequence
         self.inputs = {}
+        self.errors = []
         self.user_data = user_data
 
         # fill in the inputs to insert into the webpage
@@ -65,7 +66,7 @@ class Bot:
 
                 # Create page
                 page = await context.new_page()
-                await page.goto(self.get_url(), wait_until="domcontentloaded")
+                await page.goto(self.get_url(), wait_until="load")
                 
                 # Run sequence
                 for s in self.sequence:
@@ -75,11 +76,13 @@ class Bot:
                     elif s["action"] == "click":
                         if s["variable"] == "submit":
                             # Override default timeout for click action
-                            await page.locator(s["identifier"]).click(timeout=2500)
+                            await page.locator(s["identifier"]).click(timeout=5000)
                             self.ran = True
                         else:
-                            await page.locator(s["identifier"]).click( timeout=2500)
+                            await page.locator(s["identifier"]).click( timeout=5000)
+                await [self.ran, self.errors]
                 return self.ran
         except Exception as e:
+            msg = f" Exception in {self.get_url()}: {e}"
             self.ran = False
-            print(f" Exception in {self.get_url()}: {e}")
+            self.errors.append(msg)
