@@ -1,6 +1,7 @@
 import requests
 import json
 import os
+import csv
 import pandas as pd
 from tkinter import filedialog
 
@@ -49,4 +50,21 @@ class Helper:
         elif option == 2:
             p =  df[df["first_name"] == person].values.tolist()
         return list(p)
+
+    @staticmethod
+    def create_error_log_csv(results):
+        data = [["websites","errors"]]
+
+        for result in results:
+            website, logs = next(iter(result.items()))  # Unpack bot's result
+
+            row = []
+            row.append(website)
+            for i in range(1, len(logs)):
+                row.append(logs[i])
+            data.append(row)
+
+        with open('error_log.csv', mode='w', newline='', encoding='utf-8') as file:
+            writer = csv.writer(file)
+            writer.writerows(data)
     

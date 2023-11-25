@@ -13,7 +13,9 @@ class Bot:
         self.sequence = sequence
         self.inputs = {}
         self.errors = []
+        self.output = {}
         self.user_data = user_data
+        self.output[self.get_url()] = []
 
         # fill in the inputs to insert into the webpage
         self.fill_input_hashtable()
@@ -46,7 +48,7 @@ class Bot:
                 # Run sequence
                 for s in self.sequence:
                     if s["action"] == "Input":
-                        await page.locator(s["identifier"]).fill( self.inputs[s["variable"]], timeout=2500)
+                        await page.locator(s["identifier"]).fill( self.inputs[s["variable"]], timeout=5000)
             
                     elif s["action"] == "click":
                         if s["variable"] == "submit":
@@ -55,8 +57,10 @@ class Bot:
                             self.ran = True
                         else:
                             await page.locator(s["identifier"]).click( timeout=5000)
-                return [self.ran, self.errors] 
+                self.output[self.get_url()].append(self.ran)
+                return self.output
         except Exception as e:
-            msg = f" Exception in {self.get_url()}: {e}"
             self.ran = False
-            self.errors.append(msg)
+            self.output[self.get_url()].append(self.ran)
+            self.output[self.get_url()].append(e)
+            return self.output

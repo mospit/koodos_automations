@@ -38,26 +38,22 @@ class Session:
 
                 # Retrieve results from running bots
                 bot_results = await asyncio.gather(*tasks)
-                results.extend(bot_results)
 
-                for bot_result in results:
-                    if bot_result is not None:
-                        ran, bot_errors = bot_result  # Unpack bot's result
-                        if ran:
-                            self.n_passed += 1
-                        errors.extend(bot_errors)  # Extend the errors list with bot-specific errors
-                    else:
-                        # Handle the case where bot_result is None
-                        errors.append("Bot result is None")
-
+                for result in bot_results:
+                    website, logs = next(iter(result.items()))  # Unpack bot's result
+                    if logs[0]:
+                        self.n_passed += 1
+                    for i in range(1, len(logs)):
+                        errors.append(logs[i])
+                    
                 self.n_failed = self.n_websites - self.n_passed  # Calculate failed runs
 
                 # Printing errors, counts, success rate
-                print(f"Errors: {errors}")
+                Helper.create_error_log_csv(bot_results)
                 print(f"Total passed: {self.n_passed} Total Failed: {self.n_failed} Total websites: {len(self.data)} Success rate: {(self.n_passed / len(self.data)) * 100} %")
                 end_time = time.time()  # Get the current time again
 
                 execution_time = end_time - start_time  # Calculate the time difference
-                print(f"Execution time: {execution_time} seconds")
+                print(f"Execution time: {execution_time / 60} minutes | { execution_time/ self.n_websites} seconds per wesite")
         except Exception as e:
             print(f"Exeption: {e}")

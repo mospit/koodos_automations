@@ -117,9 +117,9 @@ class Window:
         state = self.state_entry.get()
         zip_code = self.zip_entry.get()
         return {"firstName": first_name, "lastName": last_name, "fullName": full_name, "email": email,
-                "phone": phone, "password": self._generate_password(), "zipcode": zip_code}
+                "phone": phone, "password": "KawakiChapter@24", "zipcode": zip_code}
 
-    def _generate_password(self, length=12, include_uppercase=True, include_lowercase=True, include_digits=True, include_special=True):
+    def _generate_password(self, length=16, include_uppercase=True, include_lowercase=True, include_digits=True, include_special=True):
         chars = ''
         if include_uppercase:
             chars += string.ascii_uppercase
@@ -128,7 +128,7 @@ class Window:
         if include_digits:
             chars += string.digits
         if include_special:
-            chars += string.punctuation
+            chars += '@'
 
         # Make sure the password length is at least 4 characters
         length = max(length, 4)
