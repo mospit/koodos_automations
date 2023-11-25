@@ -6,31 +6,6 @@ from helper import Helper as helper
 import time 
 from tqdm import tqdm
 
-class BotCluster:
-    def __init__(self, id, page, bots):
-        self.id = id
-        self.page = page
-        self.bots = bots
-        self.failed_bots = set()
-
-
-    async def run_bots(self):
-        count = 1
-        for bot in self.bots:
-            try:
-                await bot.run(self.page) 
-
-                if not bot.ran: 
-                    self.failed_bots.add(bot)
-                else:
-                    print(f"<<<<< {bot.get_url()} Complete! >>>>>>")
-            except Exception as e:
-                self.failed_bots.add(bot)
-                # Handle the exception, log it, or take appropriate action to continue
-              
-        await self.page.close() # close page once done
-        return [self.failed_bots, len(self.failed_bots)]
-
 class Bot:
     def __init__(self, url, sequence, user_data):
         self.ran = None
@@ -80,8 +55,7 @@ class Bot:
                             self.ran = True
                         else:
                             await page.locator(s["identifier"]).click( timeout=5000)
-                await [self.ran, self.errors]
-                return self.ran
+                return [self.ran, self.errors] 
         except Exception as e:
             msg = f" Exception in {self.get_url()}: {e}"
             self.ran = False

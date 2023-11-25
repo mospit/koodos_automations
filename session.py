@@ -2,7 +2,7 @@ import asyncio
 import time
 import tqdm
 from playwright.async_api import async_playwright
-from bot import Bot, BotCluster
+from bot import Bot
 from helper import Helper
 
 class Session:
@@ -44,18 +44,17 @@ class Session:
                     if bot_result is not None:
                         ran, bot_errors = bot_result  # Unpack bot's result
                         if ran:
-                            n_passed += 1
+                            self.n_passed += 1
                         errors.extend(bot_errors)  # Extend the errors list with bot-specific errors
                     else:
                         # Handle the case where bot_result is None
                         errors.append("Bot result is None")
 
-                n_passed = sum(results)  # Count the number of successful runs
-                n_failed = self.n_websites - n_passed  # Calculate failed runs
+                self.n_failed = self.n_websites - self.n_passed  # Calculate failed runs
 
                 # Printing errors, counts, success rate
                 print(f"Errors: {errors}")
-                print(f"Total passed: {n_passed} Total Failed: {n_failed} Total websites: {len(self.data)} Success rate: {(n_passed / len(self.data)) * 100} %")
+                print(f"Total passed: {self.n_passed} Total Failed: {self.n_failed} Total websites: {len(self.data)} Success rate: {(self.n_passed / len(self.data)) * 100} %")
                 end_time = time.time()  # Get the current time again
 
                 execution_time = end_time - start_time  # Calculate the time difference
