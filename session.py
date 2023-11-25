@@ -6,12 +6,12 @@ from bot import Bot, BotCluster
 from helper import Helper
 
 class Session:
-    def __init__(self, user_data):
+    def __init__(self, user_data, num_websites=0):
         self.data = Helper.get_data()
         self.n_failed = 0
         self.n_passed = 0
         self.processes = 5
-        self.n_websites = len(self.data)
+        self.n_websites = num_websites if num_websites > 0 else len(self.data)
         self.bots = []
     
         self.user_data = user_data

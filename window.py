@@ -63,7 +63,8 @@ class Window:
 
         self.website_cont_label = ttk.Label(master=self.footer_frame, text="# websites")
         self.website_cont_entry = ttk.Entry(master=self.footer_frame)
-        self.run_button = ttk.Button(master=self.footer_frame, text="RUN", command=self._run)
+        self.website_cont_entry.insert(0, "0")
+        self.run_button = ttk.Button(master=self.footer_frame, text="RUN", command=self._run_button_callback)
         self.upload_button = ttk.Button(master=self.footer_frame, text="Upload User Data", command=Helper.upload_csv)
         self.option_menu = tk.OptionMenu(self.footer_frame, self.variable, *self.options, command=self.on_option_select)
 
@@ -115,8 +116,7 @@ class Window:
         city = self.city_entry.get()
         state = self.state_entry.get()
         zip_code = self.zip_entry.get()
-        print(f"first name: {first_name}, last name:{last_name}, phone: {phone}, email: {email}, street1: {street1}, street2: {street2}, city: {city}, state: {state}, zip code: {zip_code}")
-        return {"firstName": first_name, "lastName": last_name, "fullName": {full_name}, "email": "jw8ia6dqsx@sfolkar.com",
+        return {"firstName": first_name, "lastName": last_name, "fullName": full_name, "email": email,
                 "phone": phone, "password": self._generate_password(), "zipcode": zip_code}
 
     def _generate_password(self, length=12, include_uppercase=True, include_lowercase=True, include_digits=True, include_special=True):
@@ -137,10 +137,15 @@ class Window:
         password = ''.join(random.choice(chars) for _ in range(length))
         return password
 
-    def _run(self):
+    def _run_button_callback(self):
+        # Run the async function using asyncio.run()
+        asyncio.run(self._run())
+
+    async def _run(self):
         user_data = self._get_input_feilds()
-        session = Session(user_data)
-        asyncio.run(session.run())
+        num_websites = int(self.website_cont_entry.get())
+        session = Session(user_data,num_websites)
+        await session.run()
 
     def on_option_select(self, event):
         selected_option = self.variable.get()
