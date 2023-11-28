@@ -19,14 +19,21 @@ class Session:
         for i in range(self.n_websites):
             bot = Bot(self.data[i]['sequence']['url'], self.data[i]['sequence']['sequence'], self.user_data)
             self.bots.append(bot)
-
+        
     async def run(self):
         try:
             async with async_playwright() as p:
                 start_time = time.time()
-
+               
+                n_context = 1
                 browser = await p.chromium.launch(headless=True)
-                context = await browser.new_context()
+                context = []
+                if self.n_websites > n_context:
+                    for i in range(n_context):
+                        c = await browser.new_context(user_agent='Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36')
+                        context.append(c)
+                else:
+                    context = await browser.new_context()
 
                 tasks = []
                 results = []
@@ -34,7 +41,8 @@ class Session:
                 sem = asyncio.Semaphore(self.processes)
 
                 for i, bot in enumerate(self.bots):
-                    tasks.append(bot.run(context, sem))
+                    idx = i % len(context)
+                    tasks.append(bot.run(context[idx], sem))
 
                 # Retrieve results from running bots
                 bot_results = await asyncio.gather(*tasks)
@@ -50,7 +58,7 @@ class Session:
 
                 # Printing errors, counts, success rate
                 Helper.create_error_log_csv(bot_results)
-                print(f"Total passed: {self.n_passed} Total Failed: {self.n_failed} Total websites: {len(self.data)} Success rate: {(self.n_passed / len(self.data)) * 100} %")
+                print(f"Total passed: {self.n_passed} Total Failed: {self.n_failed} Total websites: {len(self.data)} Success rate: {(self.n_passed / self.n_websites) * 100} %")
                 end_time = time.time()  # Get the current time again
 
                 execution_time = end_time - start_time  # Calculate the time difference
