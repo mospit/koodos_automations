@@ -1,10 +1,5 @@
-from http.client import FAILED_DEPENDENCY
-from socket import timeout
-from urllib import response
-from urllib.robotparser import RequestRate
 from helper import Helper as helper
-import time 
-from tqdm import tqdm
+from playwright.async_api import async_playwright, expect
 
 class Bot:
     def __init__(self, url, sequence, user_data):
@@ -12,7 +7,7 @@ class Bot:
         self.url = url
         self.sequence = sequence
         self.inputs = {}
-        self.errors = []
+        self.input_data = []
         self.output = {}
         self.user_data = user_data
         self.output[self.get_url()] = []
@@ -33,7 +28,7 @@ class Bot:
 
 
     async def intercept(self, route):
-        if route.request.resource_type in {"stylesheet", 'image', 'fonts', 'script'}:
+        if route.request.resource_type in {"stylesheet", 'image', 'fonts'}:
             await route.abort()
         else:
             await route.continue_()
@@ -47,27 +42,59 @@ class Bot:
 
                 # Create page
                 page = await context.new_page()
-                await page.goto(self.get_url(), wait_until="load")
+                await page.goto(self.get_url(), wait_until="load", timeout=0)
                 
                 # Run sequence
-                for s in self.sequence:
+                for s in self.sequence:  
+                    # Decide which action to take
+                    element = await self.wait_for_element( page, s["identifier"])
+                    
+                    # Check if element exists
+                    if element is None:
+                        self.ran = False
+                        msg = "Selector: " + s["identifier"] + " return none"
+                        self.output[self.get_url()].append(self.ran)
+                        self.output[self.get_url()].append(msg)
+                        await page.close()
+                        return self.output
+
+                    # Scroll element into view
+                    await element.scroll_into_view_if_needed()
+
                     if s["action"] == "Input":
-                        text = await self.fill(page, s["identifier"], self.inputs[s["variable"]])
-                        if text is not self.inputs[s["variable"]]:
+                        # Check is the input can be edited
+                        input_element = await self.wait_for_editable(page, s["identifier"])
+
+                        if not input_element:
                             self.ran = False
+                            msg = "Selector: " + s["identifier"] + " cannot be edited"
+                            self.output[self.get_url()].append(self.ran)
+                            self.output[self.get_url()].append(msg)
+                            await page.close()
+                            return self.output
+
+                        # Try to insert tbe text into the input
+                        await input_element.type(self.inputs[s["variable"]])
+                        await input_element.dispatch_event("change")
+                        value = await input_element.input_value()
+
+                        # Check the value of the input
+                        if not value.strip():
+                            self.ran = False
+                            msg = "Selector: " + s["identifier"] + " cannot insert " + self.inputs[s["variable"]]
+                            self.output[self.get_url()].append(self.ran)
+                            self.output[self.get_url()].append(msg)
+                            await page.close()
+                            return self.output
+                        
                     elif s["action"] == "click":
-                        if s["variable"] == "submit":
-                            # Override default timeout for click action
-                           # await page.locator(s["identifier"]).dispatch_event('click')
-                            
-                            await self.click(page, s["identifier"])
-                            self.ran = True
-                            await page.wait_for_timeout(2000)
-                        else:
-                            await page.locator(s["identifier"]).click(force=True)
+                        # Click button
+                        await element.evaluate('(el) => el.click()')
+                
+                self.ran = True # Set ran state 
+                await page.wait_for_timeout(2000) # Wait niumber of miliseconds
                 self.output[self.get_url()].append(self.ran)
                 await page.close()
-                time.sleep(1)
                 return self.output
         except Exception as e:
             self.ran = False
@@ -76,20 +103,19 @@ class Bot:
             await page.close()
             return self.output
 
-    async def click(self, page, element):
-        try:
-            await page.locator(element).click(timeout=5000)
-        except Exception as e:
-            print(f"{self.get_url()}: click failed")
-            await page.locator(element).dispatch_event('click')
+    async def wait_for_element(self, page, selector, max_attempts=30):
+        for _ in range(max_attempts):
+            element = await page.query_selector(selector)
+            if element and await element.is_visible() and await element.is_enabled():
+                return element
+            await page.wait_for_timeout(1000)  # Wait for 1 second before rechecking
+        return None  # If conditions aren't met after max_attempts, return None
 
-    async def fill(self, page, element, text):
-         try:
-             await page.locator(element).press_sequentially(text, timeout=5000)  
-             value = await page.locator(element).input_value()
-             return value
-         except Exception as e:
-             print(f"{self.get_url()}: fill failed")
-             await page.locator(element).fill( text, timeout=5000)
-             value = await page.locator(element).input_value()
-             return value
+    
+    async def wait_for_editable(self, page, selector, max_attempts=30):
+        for _ in range(max_attempts):
+            element = await page.query_selector(selector)
+            if element and await element.is_editable():
+                return element
+            await page.wait_for_timeout(1000)  # Wait for 1 second before rechecking
+        return None  # If element is not editable after max_attempts, return None

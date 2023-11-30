@@ -3,348 +3,201 @@ https://www.keyfood.com/store/keyFood/en/login
 https://www.casetify.com/
 https://www.jerseymikes.com/account/register
 https://www.petsuppliesplus.com/
-https://www.rue21.com/signup
+https://www.rue21.com/signup,Selector: //*[@id='id-createaccount-createbutton'] return none
 https://www.gamestop.com/
 https://www.mcdonalds.com/us/en-us/mcdonalds-email-signup.html
-https://www.jegs.com/EmailSignUp,"Error: strict mode violation: locator(""xpath=//*[@id='email']"") resolved to 2 elements:
-    1) <input id=""email"" type=""text"" class=""wide"" name=""email""…/> aka get_by_placeholder(""Enter Your Email Address"")
-    2) <input id=""email"" type=""text"" name=""email"" placeholder=…/> aka get_by_placeholder(""Enter your Email"", exact=True)
-
-=========================== logs ===========================
-waiting for locator(""xpath=//*[@id='email']"")
-============================================================"
+https://www.jegs.com/EmailSignUp
 https://www.express.com/register
-https://www.burlington.com/,"Timeout 30000ms exceeded.
+https://www.burlington.com/,Selector: //img[@alt='email sign up'] return none
+https://www.newegg.com/,"net::ERR_HTTP2_PROTOCOL_ERROR at https://www.newegg.com/
 =========================== logs ===========================
-waiting for locator(""xpath=//img[@alt='email sign up']"")
+navigating to ""https://www.newegg.com/"", waiting until ""load""
 ============================================================"
-https://www.newegg.com/
-https://www.elfcosmetics.com/,"Timeout 5000ms exceeded.
-=========================== logs ===========================
-waiting for locator(""xpath=//*[@id='subscribe']/form/div/div[1]/input"")
-============================================================"
+https://www.elfcosmetics.com/,Selector: //*[@id='subscribe']/form/div/div[1]/input return none
 https://drinkarizona.com/collections/drinks
 https://www.littlegiantladders.com/account/register
-https://www.drmartens.com/uk/en_gb/,"Timeout 30000ms exceeded.
-=========================== logs ===========================
-waiting for locator(""xpath=//*[@id='mens-newsletter']"")
-============================================================"
 https://www.hottopic.com/
-https://www.llbean.com/
+https://www.llbean.com/,Selector: //*[@id='foot-email'] cannot insert ccf9qc1m5r@bloheyz.com
 https://www.ashleystewart.com/login/
-https://www.torrid.com/,"Timeout 5000ms exceeded.
-=========================== logs ===========================
-waiting for locator(""xpath=//*[@id='footer-emailinput']"")
-============================================================"
+https://www.torrid.com/,Selector: //*[@id='footer-emailinput'] return none
 https://www.jcrew.com/
 https://www.bootbarn.com/home
 https://www.chicme.com/
 https://www.proflowers.com/
 https://www.muscleandstrength.com/
-https://www.rei.com/yaRegistration
-https://www.calvinklein.us/en/createaccount,"Timeout 5000ms exceeded.
+https://www.rei.com/yaRegistration,"net::ERR_HTTP2_PROTOCOL_ERROR at https://www.rei.com/yaRegistration
 =========================== logs ===========================
-waiting for locator(""xpath=//*[@id='registration-form-fname']"")
+navigating to ""https://www.rei.com/yaRegistration"", waiting until ""load""
 ============================================================"
-https://accounts.heb.com/interaction/Ka_zqJOITnHPb5Wmcz1n7/register,"Timeout 5000ms exceeded.
-=========================== logs ===========================
-waiting for locator(""xpath=//*[@id='firstName']"")
-============================================================"
-https://www.ashleyfurniture.com/register/,"Timeout 30000ms exceeded.
-=========================== logs ===========================
-waiting for locator(""xpath=//*[@id='dwfrm_profile_customer_addtoemaillist-label']"")
-============================================================"
+https://www.calvinklein.us/en/createaccount,Selector: //*[@id='registration-form-fname'] return none
+https://accounts.heb.com/interaction/Ka_zqJOITnHPb5Wmcz1n7/register,Selector: //*[@id='firstName'] return none
+https://www.ashleyfurniture.com/register/,Selector: //*[@id='dwfrm_profile_customer_firstname'] cannot insert Rora
 https://www.beallsflorida.com/online/
 https://www.belk.com/
-https://www.bjs.com/,"Timeout 5000ms exceeded.
-=========================== logs ===========================
-waiting for locator(""xpath=//*[@id='footeremail']"")
-============================================================"
+https://www.bjs.com/,Selector: //*[@id='footeremail'] return none
 https://www.booking.com/index.html?aid=304142&label=gen173nr-1FCAEoggI46AdIMVgEaKkCiAEBmAExuAEXyAEM2AEB6AEB-AEEiAIBqAIDuALYna-gBsACAdICJGI4NWNmMzJhLWUxMWEtNDUxNy1iM2ZlLTkwMzVjYzllNGI2OdgCBeACAQ&sid=460960fea8d593ba295375c511018f15&keep_landing=1&sb_price_type=total&
-https://www.clinique.com/,"Timeout 5000ms exceeded.
-=========================== logs ===========================
-waiting for locator(""xpath=//*[@id='email-signup']/div[1]/div[1]/input"")
-============================================================"
-https://www.dillards.com/
-https://www.baskinrobbins.com/en,"Timeout 5000ms exceeded.
-=========================== logs ===========================
-waiting for locator(""xpath=//input[@id='join-club-email-form-email']"")
-============================================================"
+https://www.clinique.com/,Selector: //*[@id='email-signup']/div[1]/div[1]/input return none
+https://www.dillards.com/,Selector: //*[@id='recipientEmail'] return none
+https://www.baskinrobbins.com/en,Selector: //input[@id='join-club-email-form-email'] return none
 https://geekout.mattnavarra.com/?ref=buffer-resources,"Unexpected token ""/"" while parsing selector ""/html/body/main/div/div[1]/div/div[2]/div/form/div/div[1]/input"""
 https://www.freddys.com/account/signup
-https://gianteagle.com/,"Timeout 5000ms exceeded.
-=========================== logs ===========================
-waiting for locator(""xpath=//*[@id='sign-up']"")
-============================================================"
+https://gianteagle.com/,Selector: //*[@id='sign-up'] return none
 https://www.grubhub.com/create-account
-https://www.jcpenney.com/
-https://www.clinique.com/account/signin.tmpl#,"Error: strict mode violation: locator(""xpath=//*[@id='registration_short']/fieldset/div[4]/input"") resolved to 2 elements:
-    1) <input value=""1"" class=""field"" type=""checkbox"" name=""PC…/> aka locator(""#form--registration_short--field--PC_EMAIL_PROMOTIONS"")
-    2) <input value=""1"" type=""hidden"" class=""field"" data-test-…/> aka locator(""#form--registration_short--field--PC_EMAIL_PROMOTIONS_PRESENT"")
-
+https://www.jcpenney.com/,"net::ERR_HTTP2_PROTOCOL_ERROR at https://www.jcpenney.com/
 =========================== logs ===========================
-waiting for locator(""xpath=//*[@id='registration_short']/fieldset/div[4]/input"")
+navigating to ""https://www.jcpenney.com/"", waiting until ""load""
 ============================================================"
-https://www.skechers.com/login/,"Timeout 30000ms exceeded.
-=========================== logs ===========================
-waiting for locator(""xpath=//*[@id='register-tab']"")
-============================================================"
+https://www.skechers.com/login/
 https://www.cnn.com/account/register/icymi
 https://www.starbucks.com/account/create
-https://www.wired.com/newsletter,"Timeout 30000ms exceeded.
-=========================== logs ===========================
-waiting for locator(""xpath=//*[@id='manage-discovery-selection-control-newsletter-list-216-0']"")
-============================================================"
 https://overtone.co/account/register
 https://www.dutchbros.com/
-https://www.finishline.com/
-https://www.halloweencostumes.com/account/register
+https://www.finishline.com/,Selector: //*[@id='footerEmailSignupDesktop']/input[1] return none
+https://www.halloweencostumes.com/account/register,Selector: //*[@id='ConfirmPassword'] cannot insert KawakiChapter@24
 https://www.skechers.com/
-https://www.goorin.com/
+https://www.goorin.com/,Selector: //*[@id='subscribe_input_footer'] cannot insert ccf9qc1m5r@bloheyz.com
 https://www.100percentpure.com/account/register
-https://www.culturekings.com/,"Timeout 30000ms exceeded.
-=========================== logs ===========================
-waiting for locator(""xpath=//button[@class='button primary ck_subscribe large primary button']"")
-============================================================"
+https://www.clinique.com/account/signin.tmpl#,Selector: #new-account-link return none
 https://sundayriley.com/account/register
 https://sundayriley.com/account/register
-https://food52.com/
+https://food52.com/,Selector: //*[@id='homepage-email'] cannot insert ccf9qc1m5r@bloheyz.com
 https://www.patagonia.com/account/login/?action=register&rurl=1
 https://www.beautylish.com/
 https://society6.com/
-https://nationaldaycalendar.com/?subscribe=pending#subscribe-blog-1,"Timeout 5000ms exceeded.
-=========================== logs ===========================
-waiting for locator(""xpath=//*[@id='subscribe-field-1']"")
-============================================================"
-https://www.svsound.com/,"Timeout 5000ms exceeded.
-=========================== logs ===========================
-waiting for locator(""xpath=//*[@id='newsletter_email']"")
-============================================================"
 https://www.pigeonforge.com/
-https://www.yeti.com/login?action=register,"Timeout 30000ms exceeded.
-=========================== logs ===========================
-waiting for locator(""xpath=//button[normalize-space()='Create Account']"")
-============================================================"
 https://www.windsorstore.com/
 https://www.weber.com/US/en/home/
 https://www.sideshow.com/
-https://www.motosport.com/account/login,"Timeout 30000ms exceeded.
+https://www.motosport.com/account/login,"net::ERR_HTTP2_PROTOCOL_ERROR at https://www.motosport.com/account/login
 =========================== logs ===========================
 navigating to ""https://www.motosport.com/account/login"", waiting until ""load""
 ============================================================"
-https://fentybeauty.com/,"Timeout 5000ms exceeded.
-=========================== logs ===========================
-waiting for locator(""xpath=//*[@id='shopify-section-footer']/footer/div[2]/div[1]/div[2]/div[1]/div[1]/div/div/input"")
-============================================================"
+https://www.svsound.com/
+https://www.nationaldaycalendar.com/newsletters,Selector: //*[@id='subscribe-field-1'] return none
+https://www.culturekings.com/
 https://www.teepublic.com/#login-modal
-https://secure.bluenile.com/account/create-account,"Timeout 5000ms exceeded.
-=========================== logs ===========================
-waiting for locator(""xpath=//*[@id='email']"")
-============================================================"
-https://casper.com/home-v2.html,"Error: strict mode violation: locator(""xpath=//button[@type='submit']"") resolved to 2 elements:
-    1) <button type=""submit"" class=""btn btn-primary subscribe-e…>Submit </button> aka get_by_role(""button"", name=""Submit"")
-    2) <button type=""submit"" class=""bx-button"" data-click=""subm…>Submit</button> aka locator(""#bx-element-2402435-IyQUitR"").get_by_text(""Submit"")
-
-=========================== logs ===========================
-waiting for locator(""xpath=//button[@type='submit']"")
-============================================================"
+https://secure.bluenile.com/account/create-account,Selector: //*[@id='email'] return none
+https://casper.com/home-v2.html
 https://www.colehaan.com/
-https://www.whitehouseblackmarket.com/store/account/registration.jsp,"Timeout 5000ms exceeded.
-=========================== logs ===========================
-waiting for locator(""xpath=//*[@id='firstName']"")
-============================================================"
+https://www.whitehouseblackmarket.com/store/account/registration.jsp,Selector: //*[@id='firstName'] return none
 https://www.bornshoes.com/
-https://bartesian.com/,"Error: strict mode violation: locator(""xpath=//button[@type='submit']"") resolved to 4 elements:
-    1) <button name=""add"" type=""submit"" class=""product-form__su…>Add to cart↵</button> aka locator(""#product-form-template--16478872043719__55089ceb-832c-4a10-aaef-66ef59bc6a00-0"").get_by_text(""Add to cart"")
-    2) <button name=""add"" type=""submit"" class=""product-form__su…>Add to cart↵</button> aka locator(""#product-form-template--16478872043719__55089ceb-832c-4a10-aaef-66ef59bc6a00-1"").get_by_text(""Add to cart"")
-    3) <button name=""add"" type=""submit"" class=""product-form__su…>Add to cart↵</button> aka locator(""#product-form-template--16478872043719__55089ceb-832c-4a10-aaef-66ef59bc6a00-2"").get_by_text(""Add to cart"")
-    4) <button type=""submit"" class=""btn newsletter-form__button"">Sign Up</button> aka get_by_text(""Sign Up"")
-
-=========================== logs ===========================
-waiting for locator(""xpath=//button[@type='submit']"")
-============================================================"
 https://www.aloyoga.com/
-https://www.yarnspirations.com/,"Timeout 5000ms exceeded.
-=========================== logs ===========================
-waiting for locator(""xpath=//*[@id='sign-up']"")
-============================================================"
-https://www.officenational.com.au/shop/en/stationerystore,"Timeout 30000ms exceeded.
-=========================== logs ===========================
-navigating to ""https://www.officenational.com.au/shop/en/stationerystore"", waiting until ""load""
-============================================================"
-https://www.umart.com.au/sign-up
+https://imartnepal.com/my-account/
+https://www.ezyshoponline.com.au/
+https://www.restorationonline.com.au/
+https://www.onlinetoys.com.au/my-account
 https://www.careops.org/,"DOMException: Failed to execute 'evaluate' on 'Document': The string '//*[@id=//*[@id=""rendering-content""]/ytd-promoted-sparkles-web-renderer' is not a valid XPath expression.
     at Object.queryAll (<anonymous>:23:25)
     at InjectedScript._queryEngineAll (<anonymous>:4758:49)
     at InjectedScript.querySelectorAll (<anonymous>:4745:30)
     at InjectedScript.querySelector (<anonymous>:4684:25)
-    at eval (eval at evaluate (:208:30), <anonymous>:9:36)
+    at eval (eval at evaluate (:208:30), <anonymous>:5:23)
     at UtilityScript.evaluate (<anonymous>:210:17)
-    at UtilityScript.<anonymous> (<anonymous>:1:44)
-=========================== logs ===========================
-waiting for locator(""xpath=//*[@id=//*[@id=\""rendering-content\""]/ytd-promoted-sparkles-web-renderer"")
-============================================================"
-https://imartnepal.com/my-account/
-https://www.ezyshoponline.com.au/
-https://www.restorationonline.com.au/
-https://www.amazingchristmas.com.au/,"Timeout 5000ms exceeded.
-=========================== logs ===========================
-waiting for locator(""xpath=//*[@id='n_home']/footer/div[1]/div/div/div/form/div/input[1]"")
-============================================================"
-https://www.onlinetoys.com.au/my-account,"Timeout 30000ms exceeded.
-=========================== logs ===========================
-waiting for locator(""xpath=//button[@name='register']"")
-============================================================"
-https://www.onlinehampers.com.au/,"Timeout 5000ms exceeded.
-=========================== logs ===========================
-waiting for locator(""xpath=//*[@id='n_home']/div[6]/div[1]/div/div/div[2]/form/div/input[1]"")
-============================================================"
+    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+https://www.officenational.com.au/shop/en/stationerystore
+https://www.yarnspirations.com/
+https://bartesian.com/,Selector: //input[@id='k_id_email'] cannot insert ccf9qc1m5r@bloheyz.com
 https://www.thejewellers.com/
 https://www.louiscopeland.com/
 https://www.welsh-tartan.com/
 https://nairns.com/
 https://www.standout.co.uk/
-https://www.saksfifthavenue.com/,"Timeout 5000ms exceeded.
-=========================== logs ===========================
-waiting for locator(""xpath=//*[@id='footer-email-signup']"")
-============================================================"
+https://www.saksfifthavenue.com/,Selector: //*[@id='footer-email-signup'] return none
 https://getwork.com/account/signup
-https://www.drmartens.com/uk/en_gb/,"Timeout 30000ms exceeded.
-=========================== logs ===========================
-waiting for locator(""xpath=//*[@id='mens-newsletter']"")
-============================================================"
-https://ovsecondopinion.substack.com/,"Timeout 5000ms exceeded.
-=========================== logs ===========================
-waiting for locator(""xpath=//div[@class='vertically-centered']//input[@placeholder='Type your email…']"")
-============================================================"
+https://www.drmartens.com/uk/en_gb/,Selector: //*[@id='newsletter-email'] cannot insert ccf9qc1m5r@bloheyz.com
 https://workweek.com/discover-newsletters/on-target/
 https://theskinrepublic.us/
-http://charogh.com/,"net::ERR_NAME_NOT_RESOLVED at http://charogh.com/
-=========================== logs ===========================
-navigating to ""http://charogh.com/"", waiting until ""load""
-============================================================"
 https://theskinrepublic.us/
 https://villageofthearts.org/
 https://soarworks.samhsa.gov/join-our-listserv
-https://biossance.com/account/register,"Timeout 30000ms exceeded.
-=========================== logs ===========================
-waiting for locator(""xpath=//button[normalize-space()='GET 20% OFF']"")
-============================================================"
+https://ovsecondopinion.substack.com/
+https://www.onlinehampers.com.au/
 https://order.pizzainn.com/#/register?gotoState=home
-https://www.dsw.com/en/us/create-account
-https://nationaldaycalendar.com/,"Timeout 5000ms exceeded.
+https://www.dsw.com/en/us/create-account,"net::ERR_HTTP2_PROTOCOL_ERROR at https://www.dsw.com/en/us/create-account
 =========================== logs ===========================
-waiting for locator(""xpath=//*[@id='subscribe-field-1']"")
+navigating to ""https://www.dsw.com/en/us/create-account"", waiting until ""load""
 ============================================================"
 https://www.pigeonforge.com/
-https://www.sallybeauty.com/,"Timeout 5000ms exceeded.
-=========================== logs ===========================
-waiting for locator(""xpath=//button[@id='mc-embedded-subscribe']"")
-============================================================"
-https://gopro.com/en/us/,"Timeout 5000ms exceeded.
-=========================== logs ===========================
-waiting for locator(""xpath=//*[@id='email']"")
-============================================================"
 https://www.dippindots.com/
-https://www.godisdope.com/account/register,"Error: strict mode violation: locator(""xpath=//*[@id='first_name']"") resolved to 2 elements:
-    1) <div id=""first_name"" class=""clearfix large_form"">…</div> aka locator(""#create_customer div"").filter(has_text=""First Name"")
-    2) <input value="""" size=""30"" type=""text"" class=""large"" id=…/> aka locator(""input[name=\""customer\\[first_name\\]\""]"")
-
+https://www.lashify.com/
+https://www.godisdope.com/account/register,Selector: //input[@id='email'] cannot insert ccf9qc1m5r@bloheyz.com
+https://gopro.com/en/us/,Selector: //input[@id='email'] return none
+https://www.sallybeauty.com/
+https://www.nationaldaycalendar.com/newsletters,Selector: //input[@placeholder='Enter your email'] return none
+https://biossance.com/account/register
+https://www.academy.com/,"Element is not attached to the DOM
 =========================== logs ===========================
-waiting for locator(""xpath=//*[@id='first_name']"")
+waiting for locator("":scope"")
+  locator resolved to <input value="""" type=""text"" name=""email"" id=""email-addr…/>
 ============================================================"
-https://www.lashify.com/,"Timeout 30000ms exceeded.
-=========================== logs ===========================
-waiting for locator(""xpath=//*[@id=\""newsletter-form-footer\""]/div[1]/div[2]/button/svg/path[1]"")
-============================================================"
-https://www.academy.com/
-https://www.marcjacobs.com/,"Unexpected token ""/"" while parsing selector ""/html/body/footer/div[1]/div[1]/form/fieldset/button"""
 https://sundayriley.com/
 https://www.teepublic.com/
 https://www.vancleefarpels.com/en/home.html
 https://www.firmoo.com/#UP_win=900&content=8
-https://www.shoecarnival.com/,"Timeout 5000ms exceeded.
-=========================== logs ===========================
-waiting for locator(""xpath=//input[@id='field-:r3:']"")
-============================================================"
-https://colourpop.com/,"Timeout 5000ms exceeded.
-=========================== logs ===========================
-waiting for locator(""xpath=//input[@id='NewsletterForm--sections--14685320118354__14d00702-5e69-4c35-ad61-505b8db30ad3']"")
-============================================================"
+https://www.sideshow.com/
+https://colourpop.com/,Selector: //input[@id='NewsletterForm--sections--14686586601554__14d00702-5e69-4c35-ad61-505b8db30ad3'] return none
+https://www.shoecarnival.com/
+https://www.marcjacobs.com/
+https://www.amazingchristmas.com.au/
 https://www.naturemade.com/
 https://casper.com/
-https://www.chicos.com/store/
-https://www.bluenile.com/,"Timeout 5000ms exceeded.
-=========================== logs ===========================
-waiting for locator(""xpath=//input[@placeholder='Email Address']"")
-============================================================"
+https://www.chicos.com/store/,Selector: //input[@id='email_signup_FOOT'] cannot insert ccf9qc1m5r@bloheyz.com
+https://fentybeauty.com/,"TypeError: el.click is not a function
+    at eval (eval at evaluate (:208:30), <anonymous>:1:12)
+    at UtilityScript.evaluate (<anonymous>:215:19)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)"
 https://speedcubeshop.com/
 https://drinkarizona.com/
 https://www.jerseymikes.com/account/register
 https://www.sllac.com/register
+https://www.bluenile.com/
 https://www.zevyjoy.com/
 https://www.zeelandplant.nl/
-https://www.yoox.com/us
+https://www.yoox.com/us,"net::ERR_HTTP2_PROTOCOL_ERROR at https://www.yoox.com/us
+=========================== logs ===========================
+navigating to ""https://www.yoox.com/us"", waiting until ""load""
+============================================================"
 https://www.goorin.com/
 https://www.100percentpure.com/account/register
 https://www.skechers.com/
 https://cityfurniture.com/
-https://overtone.co/,"Error: strict mode violation: locator(""xpath=//*[@id=\""email_43134147\""]"") resolved to 2 elements:
-    1) <input type=""email"" name=""email"" tabindex=""0"" id=""email…/> aka locator(""#shopify-section-template--15162945830977__16446077146315d091"").get_by_placeholder(""Your Email"")
-    2) <input type=""email"" name=""email"" tabindex=""0"" id=""email…/> aka locator(""#shopify-section-footer"").get_by_placeholder(""Your Email"")
-
-=========================== logs ===========================
-waiting for locator(""xpath=//*[@id=\""email_43134147\""]"")
-============================================================"
+https://overtone.co/
 https://www.culturekings.com/
 https://anovaculinary.com/
 https://www.naturemade.com/
 https://frankiesbikinis.com/
 https://user.zaful.com/sign-up.html
 https://www.casetify.com/
-https://www.homegoods.com/,"Timeout 5000ms exceeded.
+https://www.homegoods.com/,"net::ERR_HTTP2_PROTOCOL_ERROR at https://www.homegoods.com/
 =========================== logs ===========================
-waiting for locator(""xpath=//*[@id=\""footer_newsletter_email\""]"")
+navigating to ""https://www.homegoods.com/"", waiting until ""load""
 ============================================================"
 https://www.muji.us/
-https://www.1800petmeds.com/,"Error: strict mode violation: locator(""xpath=//*[@id=\""homeSignUpForm\""]/div[1]/input"") resolved to 2 elements:
-    1) <input type=""text"" name=""name"" required="""" class=""form-…/> aka get_by_placeholder(""First Name"").first
-    2) <input type=""text"" name=""name"" required="""" class=""form-…/> aka get_by_role(""textbox"", name=""First Name"")
-
-=========================== logs ===========================
-waiting for locator(""xpath=//*[@id=\""homeSignUpForm\""]/div[1]/input"")
-============================================================"
 https://www.beautylish.com/
 https://society6.com/
 https://www.pigeonforge.com/
 https://www.nastygal.com/
-https://www.hsn.com/
+https://www.hsn.com/,Selector: //input[@id='signup-email'] cannot insert ccf9qc1m5r@bloheyz.com
 https://www.1stdibs.com/
 https://www.svsound.com/
-https://www.nationaldaycalendar.com/newsletters,"Timeout 5000ms exceeded.
-=========================== logs ===========================
-waiting for locator(""xpath=//input[@placeholder='Enter your email']"")
-============================================================"
+https://www.nationaldaycalendar.com/newsletters,Selector: //input[@placeholder='Enter your email'] return none
 https://www.containerstore.com/welcome.htm
 https://www.worldmarket.com/
-https://www.freepeople.com/,"Timeout 5000ms exceeded.
-=========================== logs ===========================
-waiting for locator(""xpath=//input[@id='email-signup-email']"")
-============================================================"
+https://www.freepeople.com/,Selector: //input[@id='email-signup-email'] return none
 https://www.moncler.com/en-us/
 https://www.brilliance.com/user/login
 https://food52.com/
 https://enchroma.com/
+https://www.1800petmeds.com/
 https://www.proflowers.com/
 https://www.muscleandstrength.com/
 https://www.weber.com/US/en/home/,'agree'
 https://www.tomford.com/
 https://www.elfcosmetics.com/
 https://www.trulybeauty.com/
-https://www.backcountry.com/
-https://fentybeauty.com/,"Timeout 30000ms exceeded.
+https://www.backcountry.com/,"net::ERR_HTTP2_PROTOCOL_ERROR at https://www.backcountry.com/
 =========================== logs ===========================
-waiting for locator(""xpath=//*[@id=\""shopify-section-footer\""]/footer/div[1]/div[2]/div/div[2]/div[2]/div[1]/button/span/svg"")
+navigating to ""https://www.backcountry.com/"", waiting until ""load""
 ============================================================"
 https://www.mms.com/en-us
 https://www.crutchfield.com/S-5A7L80hsOJw/
@@ -353,17 +206,48 @@ https://www.motosport.com/,"net::ERR_HTTP2_PROTOCOL_ERROR at https://www.motospo
 navigating to ""https://www.motosport.com/"", waiting until ""load""
 ============================================================"
 https://steelseries.com/
-https://www.viviennewestwood.com/en-gb/home/,"Timeout 30000ms exceeded.
-=========================== logs ===========================
-waiting for locator(""xpath=//*[@id=\""submitButton\""]"")
-============================================================"
+https://www.viviennewestwood.com/en-gb/home/,"Selector: //*[@id=""submitButton""] return none"
 https://www.teeturtle.com/
+https://www.ezmall.com/contactus
 https://www.brooksrunning.com/en_us
 https://www.chicme.com/
 https://balticborn.com/
 https://www.bootbarn.com/
-https://www.sideshow.com/,"Timeout 5000ms exceeded.
+https://fentybeauty.com/
+https://www.drmartens.com/uk/en_gb/,Selector: //input[@id='newsletter-email'] cannot insert ccf9qc1m5r@bloheyz.com
+https://zepparella.com/
+https://www.transformationalparenting.guru/
+https://www.suncoasthosting.com.au/contact/
+https://www.suncoasthosting.com.au/contact/,"DOMException: Failed to execute 'evaluate' on 'Document': The string '//*[@id=' is not a valid XPath expression.
+    at Object.queryAll (<anonymous>:23:25)
+    at InjectedScript._queryEngineAll (<anonymous>:4758:49)
+    at InjectedScript.querySelectorAll (<anonymous>:4745:30)
+    at InjectedScript.querySelector (<anonymous>:4684:25)
+    at eval (eval at evaluate (:208:30), <anonymous>:5:23)
+    at UtilityScript.evaluate (<anonymous>:210:17)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+https://interactiveideaz.com/
+https://inopsys.eu/en
+https://inboxreads.co/n/buzzfeed-food-newsletter,"Selector: //*[@id=""subscribe-box""]/div[2]/button return none"
+https://imartnepal.com/my-account/,Selector: //input[@id='reg_billing_first_name'] return none
+https://identity.dosomething.org/register
+https://id.hm.com/id_id/customer/account/create/,Selector: //*[@id='firstname'] return none
+https://www.neimanmarcus.com/,Selector: //input[@class='email-signup__input'] return none
+https://hudabeauty.com/us/en_US/login?action=register
+https://hovenierszaken.nl/contact/
+https://havenly.com/users/add
+https://hamiltonbeach.com/register,'city'
+https://hadleighs.com/account/register
+https://greenergreens.com/
+https://gqbox.com/account/register,'agree'
+https://futureparty.com/
+https://fotofagskolen.no/
+https://florencebymills.com/account/register,Selector: //*[@id='Phone'] cannot insert 2142669114
+https://fiftyflowers.com/account/register
+https://in.iherb.com/
+https://www.yeti.com/login?action=register,Selector: //*[@id='registration-form-email-confirm'] return none
+https://www.wired.com/,"Element is not attached to the DOM
 =========================== logs ===========================
-waiting for locator(""xpath=//input[@id='dwfrm_emailsubscribe_email']"")
+waiting for locator("":scope"")
+  locator resolved to <input value="""" required="""" name=""email"" type=""email"" a…/>
 ============================================================"
-https://www.neimanmarcus.com/

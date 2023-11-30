@@ -30,7 +30,7 @@ class Session:
                 context = []
                 if self.n_websites > n_context:
                     for i in range(n_context):
-                        c = await browser.new_context(user_agent='Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36')
+                        c = await browser.new_context(user_agent=Helper.get_user_agent())
                         context.append(c)
                 else:
                     context = await browser.new_context()
