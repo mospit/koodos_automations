@@ -7,9 +7,9 @@ https://www.rue21.com/signup,Selector: //*[@id='id-createaccount-createbutton'] 
 https://www.gamestop.com/
 https://www.mcdonalds.com/us/en-us/mcdonalds-email-signup.html
 https://www.jegs.com/EmailSignUp
-https://www.express.com/register
+https://www.express.com/register,Selector: //*[@id='content']/section/section[2]/div/form/div[1]/div/input return none
 https://www.burlington.com/,Selector: //img[@alt='email sign up'] return none
-https://www.newegg.com/,"net::ERR_HTTP2_PROTOCOL_ERROR at https://www.newegg.com/
+https://www.newegg.com/,"NS_ERROR_NET_INTERRUPT
 =========================== logs ===========================
 navigating to ""https://www.newegg.com/"", waiting until ""load""
 ============================================================"
@@ -17,7 +17,7 @@ https://www.elfcosmetics.com/,Selector: //*[@id='subscribe']/form/div/div[1]/inp
 https://drinkarizona.com/collections/drinks
 https://www.littlegiantladders.com/account/register
 https://www.hottopic.com/
-https://www.llbean.com/,Selector: //*[@id='foot-email'] cannot insert ccf9qc1m5r@bloheyz.com
+https://www.llbean.com/,Selector: //*[@id='foot-email'] cannot insert kwhm69vtw1@zipcatfish.com
 https://www.ashleystewart.com/login/
 https://www.torrid.com/,Selector: //*[@id='footer-emailinput'] return none
 https://www.jcrew.com/
@@ -25,25 +25,29 @@ https://www.bootbarn.com/home
 https://www.chicme.com/
 https://www.proflowers.com/
 https://www.muscleandstrength.com/
-https://www.rei.com/yaRegistration,"net::ERR_HTTP2_PROTOCOL_ERROR at https://www.rei.com/yaRegistration
+https://www.rei.com/yaRegistration,"NS_ERROR_NET_INTERRUPT
 =========================== logs ===========================
 navigating to ""https://www.rei.com/yaRegistration"", waiting until ""load""
 ============================================================"
 https://www.calvinklein.us/en/createaccount,Selector: //*[@id='registration-form-fname'] return none
 https://accounts.heb.com/interaction/Ka_zqJOITnHPb5Wmcz1n7/register,Selector: //*[@id='firstName'] return none
-https://www.ashleyfurniture.com/register/,Selector: //*[@id='dwfrm_profile_customer_firstname'] cannot insert Rora
+https://www.ashleyfurniture.com/register/,Selector: //*[@id='dwfrm_profile_customer_firstname'] cannot insert Lurleen
 https://www.beallsflorida.com/online/
 https://www.belk.com/
 https://www.bjs.com/,Selector: //*[@id='footeremail'] return none
 https://www.booking.com/index.html?aid=304142&label=gen173nr-1FCAEoggI46AdIMVgEaKkCiAEBmAExuAEXyAEM2AEB6AEB-AEEiAIBqAIDuALYna-gBsACAdICJGI4NWNmMzJhLWUxMWEtNDUxNy1iM2ZlLTkwMzVjYzllNGI2OdgCBeACAQ&sid=460960fea8d593ba295375c511018f15&keep_landing=1&sb_price_type=total&
 https://www.clinique.com/,Selector: //*[@id='email-signup']/div[1]/div[1]/input return none
-https://www.dillards.com/,Selector: //*[@id='recipientEmail'] return none
+https://www.dillards.com/,"Target crashed
+=========================== logs ===========================
+  waiting for element to be stable
+  element is stable
+============================================================"
 https://www.baskinrobbins.com/en,Selector: //input[@id='join-club-email-form-email'] return none
 https://geekout.mattnavarra.com/?ref=buffer-resources,"Unexpected token ""/"" while parsing selector ""/html/body/main/div/div[1]/div/div[2]/div/form/div/div[1]/input"""
 https://www.freddys.com/account/signup
 https://gianteagle.com/,Selector: //*[@id='sign-up'] return none
 https://www.grubhub.com/create-account
-https://www.jcpenney.com/,"net::ERR_HTTP2_PROTOCOL_ERROR at https://www.jcpenney.com/
+https://www.jcpenney.com/,"NS_ERROR_NET_INTERRUPT
 =========================== logs ===========================
 navigating to ""https://www.jcpenney.com/"", waiting until ""load""
 ============================================================"
@@ -53,14 +57,14 @@ https://www.starbucks.com/account/create
 https://overtone.co/account/register
 https://www.dutchbros.com/
 https://www.finishline.com/,Selector: //*[@id='footerEmailSignupDesktop']/input[1] return none
-https://www.halloweencostumes.com/account/register,Selector: //*[@id='ConfirmPassword'] cannot insert KawakiChapter@24
+https://www.halloweencostumes.com/account/register
 https://www.skechers.com/
-https://www.goorin.com/,Selector: //*[@id='subscribe_input_footer'] cannot insert ccf9qc1m5r@bloheyz.com
+https://www.goorin.com/
 https://www.100percentpure.com/account/register
 https://www.clinique.com/account/signin.tmpl#,Selector: #new-account-link return none
 https://sundayriley.com/account/register
 https://sundayriley.com/account/register
-https://food52.com/,Selector: //*[@id='homepage-email'] cannot insert ccf9qc1m5r@bloheyz.com
+https://food52.com/
 https://www.patagonia.com/account/login/?action=register&rurl=1
 https://www.beautylish.com/
 https://society6.com/
@@ -68,17 +72,17 @@ https://www.pigeonforge.com/
 https://www.windsorstore.com/
 https://www.weber.com/US/en/home/
 https://www.sideshow.com/
-https://www.motosport.com/account/login,"net::ERR_HTTP2_PROTOCOL_ERROR at https://www.motosport.com/account/login
+https://www.motosport.com/account/login,"NS_ERROR_NET_INTERRUPT
 =========================== logs ===========================
 navigating to ""https://www.motosport.com/account/login"", waiting until ""load""
 ============================================================"
 https://www.svsound.com/
 https://www.nationaldaycalendar.com/newsletters,Selector: //*[@id='subscribe-field-1'] return none
 https://www.culturekings.com/
-https://www.teepublic.com/#login-modal
+https://www.teepublic.com/#login-modal,Selector: //*[@id='email_field_tp_footer'] cannot insert kwhm69vtw1@zipcatfish.com
 https://secure.bluenile.com/account/create-account,Selector: //*[@id='email'] return none
 https://casper.com/home-v2.html
-https://www.colehaan.com/
+https://www.colehaan.com/,Selector: //*[@id='footerSignup']/div[1]/input cannot insert kwhm69vtw1@zipcatfish.com
 https://www.whitehouseblackmarket.com/store/account/registration.jsp,Selector: //*[@id='firstName'] return none
 https://www.bornshoes.com/
 https://www.aloyoga.com/
@@ -86,17 +90,18 @@ https://imartnepal.com/my-account/
 https://www.ezyshoponline.com.au/
 https://www.restorationonline.com.au/
 https://www.onlinetoys.com.au/my-account
-https://www.careops.org/,"DOMException: Failed to execute 'evaluate' on 'Document': The string '//*[@id=//*[@id=""rendering-content""]/ytd-promoted-sparkles-web-renderer' is not a valid XPath expression.
-    at Object.queryAll (<anonymous>:23:25)
-    at InjectedScript._queryEngineAll (<anonymous>:4758:49)
-    at InjectedScript.querySelectorAll (<anonymous>:4745:30)
-    at InjectedScript.querySelector (<anonymous>:4684:25)
-    at eval (eval at evaluate (:208:30), <anonymous>:5:23)
-    at UtilityScript.evaluate (<anonymous>:210:17)
-    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+https://www.careops.org/,"Document.evaluate: The expression is not a legal expression
+queryAll@debugger eval code:23:25
+_queryEngineAll@debugger eval code:4758:49
+querySelectorAll@debugger eval code:4745:30
+querySelector@debugger eval code:4684:25
+@debugger eval code line 208 > eval:5:23
+evaluate@debugger eval code:210:17
+@debugger eval code:1:44
+"
 https://www.officenational.com.au/shop/en/stationerystore
 https://www.yarnspirations.com/
-https://bartesian.com/,Selector: //input[@id='k_id_email'] cannot insert ccf9qc1m5r@bloheyz.com
+https://bartesian.com/,Selector: //input[@id='k_id_email'] cannot insert kwhm69vtw1@zipcatfish.com
 https://www.thejewellers.com/
 https://www.louiscopeland.com/
 https://www.welsh-tartan.com/
@@ -104,7 +109,7 @@ https://nairns.com/
 https://www.standout.co.uk/
 https://www.saksfifthavenue.com/,Selector: //*[@id='footer-email-signup'] return none
 https://getwork.com/account/signup
-https://www.drmartens.com/uk/en_gb/,Selector: //*[@id='newsletter-email'] cannot insert ccf9qc1m5r@bloheyz.com
+https://www.drmartens.com/uk/en_gb/,Selector: //*[@id='newsletter-email'] cannot insert kwhm69vtw1@zipcatfish.com
 https://workweek.com/discover-newsletters/on-target/
 https://theskinrepublic.us/
 https://theskinrepublic.us/
@@ -113,23 +118,19 @@ https://soarworks.samhsa.gov/join-our-listserv
 https://ovsecondopinion.substack.com/
 https://www.onlinehampers.com.au/
 https://order.pizzainn.com/#/register?gotoState=home
-https://www.dsw.com/en/us/create-account,"net::ERR_HTTP2_PROTOCOL_ERROR at https://www.dsw.com/en/us/create-account
+https://www.dsw.com/en/us/create-account,"NS_ERROR_NET_INTERRUPT
 =========================== logs ===========================
 navigating to ""https://www.dsw.com/en/us/create-account"", waiting until ""load""
 ============================================================"
 https://www.pigeonforge.com/
 https://www.dippindots.com/
 https://www.lashify.com/
-https://www.godisdope.com/account/register,Selector: //input[@id='email'] cannot insert ccf9qc1m5r@bloheyz.com
+https://www.godisdope.com/account/register,Selector: //input[@id='first_name'] cannot insert Lurleen
 https://gopro.com/en/us/,Selector: //input[@id='email'] return none
 https://www.sallybeauty.com/
 https://www.nationaldaycalendar.com/newsletters,Selector: //input[@placeholder='Enter your email'] return none
 https://biossance.com/account/register
-https://www.academy.com/,"Element is not attached to the DOM
-=========================== logs ===========================
-waiting for locator("":scope"")
-  locator resolved to <input value="""" type=""text"" name=""email"" id=""email-addr…/>
-============================================================"
+https://www.academy.com/
 https://sundayriley.com/
 https://www.teepublic.com/
 https://www.vancleefarpels.com/en/home.html
@@ -141,11 +142,12 @@ https://www.marcjacobs.com/
 https://www.amazingchristmas.com.au/
 https://www.naturemade.com/
 https://casper.com/
-https://www.chicos.com/store/,Selector: //input[@id='email_signup_FOOT'] cannot insert ccf9qc1m5r@bloheyz.com
-https://fentybeauty.com/,"TypeError: el.click is not a function
-    at eval (eval at evaluate (:208:30), <anonymous>:1:12)
-    at UtilityScript.evaluate (<anonymous>:215:19)
-    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+https://www.chicos.com/store/
+https://fentybeauty.com/,"el.click is not a function
+@debugger eval code line 208 > eval:1:12
+evaluate@debugger eval code:215:19
+@debugger eval code:1:44
+"
 https://speedcubeshop.com/
 https://drinkarizona.com/
 https://www.jerseymikes.com/account/register
@@ -153,7 +155,7 @@ https://www.sllac.com/register
 https://www.bluenile.com/
 https://www.zevyjoy.com/
 https://www.zeelandplant.nl/
-https://www.yoox.com/us,"net::ERR_HTTP2_PROTOCOL_ERROR at https://www.yoox.com/us
+https://www.yoox.com/us,"NS_ERROR_NET_INTERRUPT
 =========================== logs ===========================
 navigating to ""https://www.yoox.com/us"", waiting until ""load""
 ============================================================"
@@ -168,7 +170,7 @@ https://www.naturemade.com/
 https://frankiesbikinis.com/
 https://user.zaful.com/sign-up.html
 https://www.casetify.com/
-https://www.homegoods.com/,"net::ERR_HTTP2_PROTOCOL_ERROR at https://www.homegoods.com/
+https://www.homegoods.com/,"NS_ERROR_NET_INTERRUPT
 =========================== logs ===========================
 navigating to ""https://www.homegoods.com/"", waiting until ""load""
 ============================================================"
@@ -177,7 +179,7 @@ https://www.beautylish.com/
 https://society6.com/
 https://www.pigeonforge.com/
 https://www.nastygal.com/
-https://www.hsn.com/,Selector: //input[@id='signup-email'] cannot insert ccf9qc1m5r@bloheyz.com
+https://www.hsn.com/,Selector: //input[@id='signup-email'] cannot insert kwhm69vtw1@zipcatfish.com
 https://www.1stdibs.com/
 https://www.svsound.com/
 https://www.nationaldaycalendar.com/newsletters,Selector: //input[@placeholder='Enter your email'] return none
@@ -185,23 +187,23 @@ https://www.containerstore.com/welcome.htm
 https://www.worldmarket.com/
 https://www.freepeople.com/,Selector: //input[@id='email-signup-email'] return none
 https://www.moncler.com/en-us/
-https://www.brilliance.com/user/login
+https://www.brilliance.com/user/login,Selector: //input[@id='edit-name--2'] cannot insert kwhm69vtw1@zipcatfish.com
 https://food52.com/
 https://enchroma.com/
-https://www.1800petmeds.com/
+https://www.1800petmeds.com/,Selector: //div[@class='footer-subscribe-container hidden-sm-down']//input[@placeholder='First Name'] cannot insert Lurleen
 https://www.proflowers.com/
 https://www.muscleandstrength.com/
 https://www.weber.com/US/en/home/,'agree'
 https://www.tomford.com/
 https://www.elfcosmetics.com/
 https://www.trulybeauty.com/
-https://www.backcountry.com/,"net::ERR_HTTP2_PROTOCOL_ERROR at https://www.backcountry.com/
+https://www.backcountry.com/,"NS_ERROR_NET_INTERRUPT
 =========================== logs ===========================
 navigating to ""https://www.backcountry.com/"", waiting until ""load""
 ============================================================"
 https://www.mms.com/en-us
-https://www.crutchfield.com/S-5A7L80hsOJw/
-https://www.motosport.com/,"net::ERR_HTTP2_PROTOCOL_ERROR at https://www.motosport.com/
+https://www.crutchfield.com/S-5A7L80hsOJw/,Selector: //div[@class='input-group-append input-group-addon modular-group-addon']/button[@class='btn btn-primary'] return none
+https://www.motosport.com/,"NS_ERROR_NET_INTERRUPT
 =========================== logs ===========================
 navigating to ""https://www.motosport.com/"", waiting until ""load""
 ============================================================"
@@ -214,22 +216,23 @@ https://www.chicme.com/
 https://balticborn.com/
 https://www.bootbarn.com/
 https://fentybeauty.com/
-https://www.drmartens.com/uk/en_gb/,Selector: //input[@id='newsletter-email'] cannot insert ccf9qc1m5r@bloheyz.com
+https://www.drmartens.com/uk/en_gb/,Selector: //input[@id='newsletter-email'] cannot insert kwhm69vtw1@zipcatfish.com
 https://zepparella.com/
 https://www.transformationalparenting.guru/
 https://www.suncoasthosting.com.au/contact/
-https://www.suncoasthosting.com.au/contact/,"DOMException: Failed to execute 'evaluate' on 'Document': The string '//*[@id=' is not a valid XPath expression.
-    at Object.queryAll (<anonymous>:23:25)
-    at InjectedScript._queryEngineAll (<anonymous>:4758:49)
-    at InjectedScript.querySelectorAll (<anonymous>:4745:30)
-    at InjectedScript.querySelector (<anonymous>:4684:25)
-    at eval (eval at evaluate (:208:30), <anonymous>:5:23)
-    at UtilityScript.evaluate (<anonymous>:210:17)
-    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+https://www.suncoasthosting.com.au/contact/,"Document.evaluate: The expression is not a legal expression
+queryAll@debugger eval code:23:25
+_queryEngineAll@debugger eval code:4758:49
+querySelectorAll@debugger eval code:4745:30
+querySelector@debugger eval code:4684:25
+@debugger eval code line 208 > eval:5:23
+evaluate@debugger eval code:210:17
+@debugger eval code:1:44
+"
 https://interactiveideaz.com/
 https://inopsys.eu/en
-https://inboxreads.co/n/buzzfeed-food-newsletter,"Selector: //*[@id=""subscribe-box""]/div[2]/button return none"
-https://imartnepal.com/my-account/,Selector: //input[@id='reg_billing_first_name'] return none
+https://inboxreads.co/n/buzzfeed-food-newsletter
+https://imartnepal.com/my-account/
 https://identity.dosomething.org/register
 https://id.hm.com/id_id/customer/account/create/,Selector: //*[@id='firstname'] return none
 https://www.neimanmarcus.com/,Selector: //input[@class='email-signup__input'] return none
@@ -242,7 +245,7 @@ https://greenergreens.com/
 https://gqbox.com/account/register,'agree'
 https://futureparty.com/
 https://fotofagskolen.no/
-https://florencebymills.com/account/register,Selector: //*[@id='Phone'] cannot insert 2142669114
+https://florencebymills.com/account/register,'agree'
 https://fiftyflowers.com/account/register
 https://in.iherb.com/
 https://www.yeti.com/login?action=register,Selector: //*[@id='registration-form-email-confirm'] return none

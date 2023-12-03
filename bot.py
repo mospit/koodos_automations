@@ -1,5 +1,6 @@
 from helper import Helper as helper
 from playwright.async_api import async_playwright, expect
+from playwright_stealth import stealth_async
 
 class Bot:
     def __init__(self, url, sequence, user_data):
@@ -42,6 +43,7 @@ class Bot:
 
                 # Create page
                 page = await context.new_page()
+                await stealth_async(page)
                 await page.goto(self.get_url(), wait_until="load", timeout=0)
                 
                 # Run sequence

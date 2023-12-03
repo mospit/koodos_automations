@@ -26,11 +26,12 @@ class Session:
                 start_time = time.time()
                
                 n_context = 1
-                browser = await p.chromium.launch(headless=True)
+                browser = await p.firefox.launch(headless=True)
                 context = []
                 if self.n_websites > n_context:
                     for i in range(n_context):
                         c = await browser.new_context(user_agent=Helper.get_user_agent())
+                        await c.add_init_script(path="program.js")
                         context.append(c)
                 else:
                     context = await browser.new_context()
